@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upgrader BR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-left">
+            <img src="./data/assets/icon.png" alt="Logo" class="logo">
+            <div class="players-online">
+                <img src="./data/assets/users.svg" alt="Users" class="users-icon">
+                <span>1 980</span>
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="currency">
+                <span>0</span>
+                <img src="./data/assets/icon.png" alt="Currency Icon" class="currency-icon">
+            </div>
+            <button class="add-currency">
+                <img src="./data/assets/plus.svg" alt="Add Currency">
+            </button>
+            <button class="notifications">
+                <img src="./data/assets/bell.svg" alt="Notifications">
+            </button>
+            <a href="profile.html" class="profile-link" aria-label="Профиль">
+                <img src="./data/assets/user.png" alt="Profile" class="profile-picture">
+            </a>
+        </div>
+    </header>
+
+    <main class="upgrader-container">
+        <div class="upgrader-title">
+            <img src="./data/assets/icon.png" alt="Upgrader Icon" class="title-icon">
+            <h1>Upgrader</h1>
+        </div>
+
+        <div class="upgrader-actions">
+            <button><img src="./data/assets/info.svg" alt="Info"></button>
+            <button><img src="./data/assets/settings.svg" alt="Settings"></button>
+            <button><img src="./data/assets/sound.svg" alt="Sound"></button>
+            <button><img src="./data/assets/bolt.svg" alt="Fast"></button>
+        </div>
+
+        <div class="circle-container">
+            <div class="circle-wrapper">
+                <div class="circle-ticks"></div>
+                <svg viewBox="0 0 100 100" class="progress-circle">
+                    <!-- Background tracks -->
+                    <path class="track outer" d="M 15 50 a 35 35 0 1 1 70 0 a 35 35 0 1 1 -70 0" />
+                    <!-- Colored half track -->
+                    <path class="track inner" d="M 15 50 a 35 35 0 0 0 70 0" />
+                </svg>
+                <div class="circle-labels">
+                    <span class="label left">50%</span>
+                    <span class="label top">100%</span>
+                    <span class="label right">50%</span>
+                </div>
+                <div class="pointer-wrapper">
+                     <img src="./data/assets/chevron-up.svg" class="pointer-icon">
+                </div>
+                <div class="circle-content">
+                    <div class="chance-value">50.00%</div>
+                    <div class="chance-label">средний шанс</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="selection-container">
+            <div class="selection-box">
+                <div class="box-text">
+                    <h3>Выберите скины или скины и баланс<br>для использования</h3>
+                    <p>Вы можете выбрать несколько скинов</p>
+                </div>
+                <div class="selection-image-wrapper">
+                     <div class="placeholder-ak"></div>
+                     <img src="./data/assets/chevrons-down.svg" class="icon" alt="Down">
+                </div>
+            </div>
+            <div class="selection-box">
+                <div class="box-text">
+                    <h3>Выберите скин<br>для апгрейда</h3>
+                </div>
+                <div class="selection-image-wrapper">
+                    <div class="placeholder-ak"></div>
+                     <img src="./data/assets/chevrons-up.svg" class="icon" alt="Up">
+                </div>
+            </div>
+        </div>
+
+        <button class="upgrade-btn">
+            <img src="./data/assets/chevrons-up.svg" alt="Up"> Прокачать
+        </button>
+
+        <div class="balance-container">
+            <div class="balance-header">
+                <span class="balance-title">Сумма баланса:</span>
+                <span class="balance-amount">0.00 <img src="./data/assets/icon.png" class="currency-icon-small"> <span class="max-balance">(max 0.00)</span></span>
+            </div>
+            <div class="slider-wrapper">
+                <input type="range" min="0" max="100" value="0" class="balance-slider">
+            </div>
+        </div>
+
+        <div class="multiplier-container">
+            <button class="multi-btn">x2</button>
+            <button class="multi-btn">x4</button>
+            <button class="multi-btn">x8</button>
+            <button class="chance-btn">35%</button>
+            <button class="chance-btn">55%</button>
+            <button class="chance-btn">75%</button>
+            <button class="settings-btn-bottom"><img src="./data/assets/settings.svg"></button>
+        </div>
+
+    </main>
+
+    <section class="inventory-container">
+        <div class="inventory-tabs">
+            <button class="tab-btn active">Мои предметы</button>
+            <button class="tab-btn">Желаемые предметы</button>
+        </div>
+        
+        <div class="inventory-subtabs-wrapper">
+            <div class="inventory-subtabs">
+                <button class="subtab-btn active">
+                    <img src="./data/assets/knife.svg" alt="Skins" class="subtab-icon"> Мои скины
+                </button>
+                <button class="subtab-btn">
+                    <img src="./data/assets/store.svg" alt="Shop" class="subtab-icon"> Магазин
+                </button>
+            </div>
+        </div>
+
+        <div class="items-grid">
+            <div class="item-card rarity-red">
+                <div class="item-price">1 500.00 <img src="./data/assets/icon.png" class="currency-icon-small"></div>
+                <div class="item-image-wrapper"><img src="./data/items/item-placeholder.png" alt="Item" class="item-image"></div>
+                <div class="item-name">Скин 1</div>
+            </div>
+            <div class="item-card rarity-pink">
+                <div class="item-price">850.50 <img src="./data/assets/icon.png" class="currency-icon-small"></div>
+                <div class="item-image-wrapper"><img src="./data/items/item-placeholder.png" alt="Item" class="item-image"></div>
+                <div class="item-name">Скин 2</div>
+            </div>
+            <div class="item-card rarity-purple">
+                <div class="item-price">320.00 <img src="./data/assets/icon.png" class="currency-icon-small"></div>
+                <div class="item-image-wrapper"><img src="./data/items/item-placeholder.png" alt="Item" class="item-image"></div>
+                <div class="item-name">Скин 3</div>
+            </div>
+            <div class="item-card rarity-blue">
+                <div class="item-price">150.25 <img src="./data/assets/icon.png" class="currency-icon-small"></div>
+                <div class="item-image-wrapper"><img src="./data/items/item-placeholder.png" alt="Item" class="item-image"></div>
+                <div class="item-name">Скин 4</div>
+            </div>
+            <div class="item-card rarity-blue">
+                <div class="item-price">120.00 <img src="./data/assets/icon.png" class="currency-icon-small"></div>
+                <div class="item-image-wrapper"><img src="./data/items/item-placeholder.png" alt="Item" class="item-image"></div>
+                <div class="item-name">Скин 5</div>
+            </div>
+             <div class="item-card rarity-purple">
+                <div class="item-price">410.00 <img src="./data/assets/icon.png" class="currency-icon-small"></div>
+                <div class="item-image-wrapper"><img src="./data/items/item-placeholder.png" alt="Item" class="item-image"></div>
+                <div class="item-name">Скин 6</div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль | Upgrader BR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-left">
+            <a href="index.html" class="logo-link" aria-label="На главную">
+                <img src="./data/assets/icon.png" alt="Logo" class="logo">
+            </a>
+            <div class="players-online">
+                <img src="./data/assets/users.svg" alt="Users" class="users-icon">
+                <span>1 980</span>
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="currency">
+                <span>0</span>
+                <img src="./data/assets/icon.png" alt="Currency Icon" class="currency-icon">
+            </div>
+            <button class="add-currency">
+                <img src="./data/assets/plus.svg" alt="Add Currency">
+            </button>
+            <button class="notifications">
+                <img src="./data/assets/bell.svg" alt="Notifications">
+            </button>
+            <a href="profile.html" class="profile-link" aria-label="Профиль">
+                <img src="./data/assets/user.png" alt="Profile" class="profile-picture">
+            </a>
+        </div>
+    </header>
+
+    <main class="profile-page-main">
+        <section class="profile-card">
+            <div class="profile-card-header">
+                <div>
+                    <div class="profile-label">Личный кабинет</div>
+                    <div class="profile-username" id="profileUsername">hakuji.白地</div>
+                </div>
+                <button class="vip-badge">VIP CLUB</button>
+            </div>
+            <div class="profile-id-row">
+                <span class="profile-id" id="profileId">ID 998605</span>
+                <button class="icon-button" id="openSettingsBtn" aria-label="Настройки">
+                    <img src="./data/assets/settings.svg" alt="Настройки">
+                </button>
+            </div>
+            <div class="profile-avatar-sync">
+                <div class="avatar-preview">
+                    <img id="avatarPreview" src="./data/assets/user.png" alt="Avatar" class="profile-picture profile-picture-large">
+                </div>
+                <div class="avatar-sync-info">
+                        <div class="sync-label">Данные Telegram</div>
+                    <div class="sync-status" id="syncStatus">Ожидается синхронизация через Mini-App</div>
+                </div>
+            </div>
+            <div class="profile-balance-card">
+                <div class="profile-balance-title">Баланс</div>
+                <div class="profile-balance-value">0 <img src="./data/assets/icon.png" class="currency-icon-small" alt=""></div>
+            </div>
+            <div class="profile-actions">
+                <button class="profile-btn primary">Пополнить</button>
+                <button class="profile-btn secondary">Купон</button>
+            </div>
+            <div class="profile-stats">
+                <div class="profile-stat">
+                    <span class="stat-label">Выведено</span>
+                    <span class="stat-value">0.00 <img src="./data/assets/icon.png" class="currency-icon-small" alt=""></span>
+                </div>
+                <div class="profile-stat">
+                    <span class="stat-label">Апгрейдов</span>
+                    <span class="stat-value">0</span>
+                </div>
+            </div>
+            <div class="profile-drop-card">
+                <div class="drop-title">Лучший дроп</div>
+                <div class="drop-placeholder">Отобразится после первой игры</div>
+            </div>
+            <div class="profile-inventory-section">
+                <div class="inventory-section-header">
+                    <div class="inventory-section-title">Инвентарь</div>
+                    <div class="inventory-count" id="inventoryCount">0 предметов</div>
+                </div>
+                <div class="inventory-list" id="inventoryList">
+                    <div class="inventory-empty">Инвентарь пуст</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal-overlay hidden" id="settingsModal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <div class="settings-header">Настройки профиля</div>
+                <button class="modal-close" id="closeSettingsBtn" aria-label="Закрыть">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="profile-upload-row">
+                    <label class="upload-label">
+                        <input type="file" accept="image/png,image/jpeg,image/webp" id="avatarInput">
+                        Выбрать аватарку
+                    </label>
+                    <button id="uploadAvatarBtn" class="profile-btn primary">Загрузить</button>
+                </div>
+                <div class="profile-message" id="profileMessage"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/supabase.min.js"></script>
+    <script src="supabase.js"></script>
+    <script src="app.js"></script>
+    <script src="profile.js"></script>
+</body>
+</html>
